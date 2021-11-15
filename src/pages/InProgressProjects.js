@@ -4,17 +4,20 @@ import { Link } from 'react-router-dom';
 import Main from '../layouts/Main';
 
 import Cell from '../components/Projects/Cell';
-import data from '../data/projects';
+import data from '../data/inProgressProjects';
 
-const Projects = () => (
-  <Main title="Projects" description="Learn about Amir Ekbatani's projects.">
+const InProgressProjects = () => (
+  <Main
+    title="In Progress Projects"
+    description="Learn about Amir Ekbatani's in progress projects."
+  >
     <article className="post" id="projects">
       <header>
         <div className="title">
           <h2 data-testid="heading">
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects">In Progress Projects</Link>
           </h2>
-          <p>A selection of projects that I&apos;m not too ashamed of</p>
+          <p>This is what I&apos;m doing right now</p>
         </div>
       </header>
       {data.map((project) => (
@@ -24,4 +27,4 @@ const Projects = () => (
   </Main>
 );
 
-export default Projects;
+export default InProgressProjects;

@@ -110,12 +110,22 @@ const skills = [
   {
     title: 'English language',
     competency: 4,
-    category: ['Soft Skill'],
+    category: ['Public Skill'],
   },
   {
     title: 'Eager to learn',
     competency: 4,
-    category: ['Soft Skill'],
+    category: ['Public Skill'],
+  },
+  {
+    title: 'Blockchain technology',
+    competency: 3,
+    category: ['Public Skill'],
+  },
+  {
+    title: 'Comunication and social activities',
+    competency: 3,
+    category: ['Public Skill'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

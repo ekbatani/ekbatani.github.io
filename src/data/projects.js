@@ -2,7 +2,7 @@
 const data = [
   {
     title: 'Karafarin Insurance 2543 Agent',
-    subtitle: '2015 BVP Hackathon',
+    subtitle: '',
     link: 'https://notbime.ir',
     image: '/images/projects/notbime2.jpg',
     date: '2020-08-10',

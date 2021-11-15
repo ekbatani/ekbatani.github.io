@@ -40,7 +40,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Amir Ekbatani <Link to="/">https://intereki.github.io</Link>.
+        &copy; Amir Ekbatani <Link to="/">https://ekbatani.github.io</Link>.
       </p>
     </section>
   </section>
