@@ -11,14 +11,6 @@ const Main = (props) => (
   <HelmetProvider>
     <Analytics />
     <ScrollToTop />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLW927R7YY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-JLW927R7YY');
-    </script>
     <Helmet
       titleTemplate="%s | Amir Ekbatani"
       defaultTitle="Amir Ekbatani"

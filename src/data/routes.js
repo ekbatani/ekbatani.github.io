@@ -25,6 +25,10 @@ const routes = [
     path: '/blog',
   },
   {
+    label: 'Second Brain',
+    path: '/SecondBrain/1',
+  },
+  {
     label: 'Stats',
     path: '/stats',
   },
