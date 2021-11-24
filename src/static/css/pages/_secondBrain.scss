@@ -1,0 +1,34 @@
+// Second Brain page (/secondBrain)
+
+#secondBrain {
+  .note {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: cadetblue;
+    }
+
+    .body {
+      display: flex;
+      flex-direction: row;
+      border-top: solid 1px rgba(160, 160, 160, 0.3);
+      border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+
+      .recall {
+        width: 25%;
+        margin: _size(section-spacing-small);
+        border-right: solid 1px rgba(160, 160, 160, 0.3);
+      }
+
+      .context {
+        width: 75%;
+        margin: _size(section-spacing-small);
+      }
+    }
+
+    .summery {
+      margin: _size(section-spacing-small);
+    }
+  }
+}

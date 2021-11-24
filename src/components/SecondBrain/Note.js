@@ -4,24 +4,80 @@ import { PropTypes } from 'prop-types';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 
-const Note = ({ data }) => (
-  <div>
-    <div>
-      <h3>{data.title}</h3>
-    </div>
-    <div>
-      <p>{data.subTitle}</p>
-    </div>
-    <div>
-      <div className="3">
-        <h4>Recall</h4>
+function Note({ data }) {
+  const tags = Object.values(data.recall.tags);
+  const questions = Object.values(data.recall.questions);
+  const notes = Array.from(data.notes);
+  const summery = Array.from(data.summery);
+
+  return (
+    <div className="note">
+      <div className="title">
+        <h3>{data.title}</h3>
       </div>
-      <div className="9">
-        <h4>Note</h4>
+      <div className="subtitle">
+        <p>{data.subTitle}</p>
+      </div>
+      <div className="body">
+        <div className="recall">
+          <h4>Recall</h4>
+          <h5>tags :</h5>
+          {tags.map((tag) => (
+            <span key={tag}>{tag}, </span>
+          ))}
+          <br />
+          <br />
+          <h5>questions :</h5>
+          {questions.map((question) => (
+            <div key={question}>{question} </div>
+          ))}
+        </div>
+
+        <div className="context">
+          <h4>Note</h4>
+          {notes.map((note) => (
+            <div>
+              <div>{note.title}</div>
+              {Object.values(note.text).map((text) => (
+                <div>
+                  {note.isList ? (
+                    <a href={`${text.link}`} key={`${text.text}`}>
+                      {text.text}
+                    </a>
+                  ) : (
+                    <div key={`${text.link}`}>{text.text}</div>
+                  )}
+                </div>
+              ))}
+              <br />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="summery">
+        <h4>Summery</h4>
+        {summery.map((note) => (
+          <div>
+            <div>{note.title}</div>
+            {Object.values(note.text).map((text) => (
+              <div>
+                {note.isList ? (
+                  <a href={`${text.link}`} key={`${text.text}`}>
+                    {text.text}
+                  </a>
+                ) : (
+                  <div key={`${text.link}`}>{text.text}</div>
+                )}
+              </div>
+            ))}
+            <br />
+          </div>
+        ))}
       </div>
     </div>
-  </div>
-);
+  );
+}
 
 Note.propTypes = {
   data: PropTypes.shape({
@@ -31,13 +87,13 @@ Note.propTypes = {
     subTitle: PropTypes.string,
     link: PropTypes.string,
     date: PropTypes.string,
-    recall: PropTypes.shape({
+    recall: PropTypes.arrayOf({
       tags: PropTypes.arrayOf(PropTypes.string),
       questions: PropTypes.arrayOf(PropTypes.string),
     }),
     notes: PropTypes.arrayOf(
       PropTypes.shape({
-        type: PropTypes.string,
+        isList: PropTypes.bool,
         title: PropTypes.string,
         text: PropTypes.arrayOf(
           PropTypes.shape({

@@ -1,10 +1,10 @@
 {
   "main": {
-    "id": "8173cef4a8fc9acb",
+    "id": "761d4a48f3d56ee4",
     "type": "split",
     "children": [
       {
-        "id": "c334c9ff9708b4ab",
+        "id": "091ada354c69b619",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -82,7 +82,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c334c9ff9708b4ab",
+  "active": "091ada354c69b619",
   "lastOpenFiles": [
     "Second Brain.md",
     "Programming/programming.md"
