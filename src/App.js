@@ -13,7 +13,6 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Projects = lazy(() => import('./pages/Projects'));
-const InProgressProjects = lazy(() => import('./pages/InProgressProjects'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Stats = lazy(() => import('./pages/Stats'));
@@ -26,7 +25,6 @@ const App = () => (
         <Route exact path="/" component={Index} />
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
-        <Route path="/InProgressProjects" component={InProgressProjects} />
         <Route path="/Blog" component={Blog} />
         <Route path="/SecondBrain/:id" component={SecondBrain} />
         <Route path="/stats" component={Stats} />

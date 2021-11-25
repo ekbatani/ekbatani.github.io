@@ -62,10 +62,10 @@ const data = [
             text: 'programming',
             link: '2',
           },
-          {
-            text: 'study',
-            link: '3',
-          },
+          // {
+          //   text: 'study',
+          //   link: '18',
+          // },
         ],
       },
     ],
@@ -103,66 +103,66 @@ const data = [
         isList: true,
         title: 'Topics',
         text: [
-          {
-            text: 'Dotnet core',
-            link: '3',
-          },
-          {
-            text: 'Angular',
-            link: '4',
-          },
-          {
-            text: 'blockchain',
-            link: '5',
-          },
-          {
-            text: 'Database',
-            link: '6',
-          },
-          {
-            text: 'Design pattern',
-            link: '7',
-          },
-          {
-            text: 'Front-end',
-            link: '8',
-          },
-          {
-            text: 'Git',
-            link: '9',
-          },
-          {
-            text: 'Ionic',
-            link: '10',
-          },
-          {
-            text: 'Linux',
-            link: '11',
-          },
-          {
-            text: 'Nginx',
-            link: '12',
-          },
-          {
-            text: 'Node.js',
-            link: '13',
-          },
-          {
-            text: 'Public Skills',
-            link: '14',
-          },
-          {
-            text: 'Python',
-            link: '15',
-          },
-          {
-            text: 'React',
-            link: '16',
-          },
-          {
-            text: 'Tools',
-            link: '17',
-          },
+          // {
+          //   text: 'Dotnet core',
+          //   link: '3',
+          // },
+          // {
+          //   text: 'Angular',
+          //   link: '4',
+          // },
+          // {
+          //   text: 'blockchain',
+          //   link: '5',
+          // },
+          // {
+          //   text: 'Database',
+          //   link: '6',
+          // },
+          // {
+          //   text: 'Design pattern',
+          //   link: '7',
+          // },
+          // {
+          //   text: 'Front-end',
+          //   link: '8',
+          // },
+          // {
+          //   text: 'Git',
+          //   link: '9',
+          // },
+          // {
+          //   text: 'Ionic',
+          //   link: '10',
+          // },
+          // {
+          //   text: 'Linux',
+          //   link: '11',
+          // },
+          // {
+          //   text: 'Nginx',
+          //   link: '12',
+          // },
+          // {
+          //   text: 'Node.js',
+          //   link: '13',
+          // },
+          // {
+          //   text: 'Public Skills',
+          //   link: '14',
+          // },
+          // {
+          //   text: 'Python',
+          //   link: '15',
+          // },
+          // {
+          //   text: 'React',
+          //   link: '16',
+          // },
+          // {
+          //   text: 'Tools',
+          //   link: '17',
+          // },
         ],
       },
     ],

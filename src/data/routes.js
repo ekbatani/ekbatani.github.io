@@ -17,10 +17,6 @@ const routes = [
     path: '/projects',
   },
   {
-    label: 'In Progress Projects',
-    path: '/InProgressProjects',
-  },
-  {
     label: 'Blog',
     path: '/blog',
   },

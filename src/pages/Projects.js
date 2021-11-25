@@ -5,6 +5,7 @@ import Main from '../layouts/Main';
 
 import Cell from '../components/Projects/Cell';
 import data from '../data/projects';
+import dataInProgress from '../data/inProgressProjects';
 
 const Projects = () => (
   <Main title="Projects" description="Learn about Amir Ekbatani's projects.">
@@ -18,6 +19,17 @@ const Projects = () => (
         </div>
       </header>
       {data.map((project) => (
+        <Cell data={project} key={project.title} />
+      ))}
+      <header>
+        <div className="title">
+          <h2 data-testid="heading">
+            <Link to="/projects">In Progress Projects</Link>
+          </h2>
+          <p>This is what I&apos;m doing right now</p>
+        </div>
+      </header>
+      {dataInProgress.map((project) => (
         <Cell data={project} key={project.title} />
       ))}
     </article>
