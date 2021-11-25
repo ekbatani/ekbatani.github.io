@@ -21,7 +21,10 @@ const SideBar = () => (
 
     <section className="blurb">
       <h2>About</h2>
-      <p>Hi, I&apos;m Amir. I like building things.</p>
+      <p>
+        Hi, I&apos;m Amir. My enjoyment is to research and learn new stuff. So
+        choosing web developer as career is the best way to enjoying my life.
+      </p>
       <ul className="actions">
         <li>
           {!window.location.pathname.includes('/resume') ? (

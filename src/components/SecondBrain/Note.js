@@ -1,8 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 function Note({ data }) {
   const tags = Object.values(data.recall.tags);
@@ -41,9 +39,9 @@ function Note({ data }) {
               {Object.values(note.text).map((text) => (
                 <div>
                   {note.isList ? (
-                    <a href={`${text.link}`} key={`${text.text}`}>
+                    <Link to={`${text.link}`} key={`${text.text}`}>
                       {text.text}
-                    </a>
+                    </Link>
                   ) : (
                     <div key={`${text.link}`}>{text.text}</div>
                   )}
@@ -63,9 +61,9 @@ function Note({ data }) {
             {Object.values(note.text).map((text) => (
               <div>
                 {note.isList ? (
-                  <a href={`${text.link}`} key={`${text.text}`}>
+                  <Link to={`${text.link}`} key={`${text.text}`}>
                     {text.text}
-                  </a>
+                  </Link>
                 ) : (
                   <div key={`${text.link}`}>{text.text}</div>
                 )}

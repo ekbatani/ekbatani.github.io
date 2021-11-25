@@ -6,6 +6,11 @@ import Note from '../components/SecondBrain/Note';
 
 import data from '../data/SecondBrain/secondBrain';
 
+const sections = [
+  { title: 'Second brain', link: 1 },
+  { title: 'Programming', link: 2 },
+];
+
 const getId = () => {
   let { id } = useParams();
   if (id === null) id = '1';
@@ -28,8 +33,15 @@ const SecondBrain = () => (
       <header>
         <div className="title">
           <h2 data-testid="heading">
-            <Link to="/secondBrain">Second Brain</Link>
+            <Link to="/secondBrain/1">Second Brain</Link>
           </h2>
+          <div className="link-container">
+            {sections.map((sec) => (
+              <h4 key={sec}>
+                <Link to={`${sec.link}`}>{sec.title}</Link>
+              </h4>
+            ))}
+          </div>
         </div>
       </header>
       <Note data={getData()} key={getId()} />
