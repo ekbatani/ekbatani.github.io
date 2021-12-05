@@ -13,7 +13,7 @@ const Index = () => (
           </h2>
           <p>
             My enjoyment is to research and learn new stuff. So choosing web
-            developer as career is the best way to enjoying my life.
+            developer as career is the best way to enjoy my life.
           </p>
         </div>
       </header>
@@ -31,7 +31,7 @@ const Index = () => (
         <a href="https://github.com/ekbatani/ekbatani.github.io">here</a>.
       </p>
       <p>
-        Thank to{' '}
+        Thanks to{' '}
         <a href="https://github.com/mldangelo/personal-site">mldangelo</a> for
         building this template.
       </p>

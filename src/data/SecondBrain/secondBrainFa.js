@@ -1,64 +1,48 @@
 const data = [
   {
     id: 1,
-    title: 'This is my second brain!',
+    title: 'این مغز دوم من است!',
     subTitle:
-      'I try to create Second Brain in some major topics of my life, in "Cornell Notes" format. (under construction)',
+      'من سعی می کنم مغز دوم خودم رو در موضوعات اصلی فعالیت هام با فرمت "نت های کرنل" ایجا بنویسم. (در حال توسعه)',
     link: '/secondBrain/1',
     date: '2021-11-22',
     recall: {
-      tags: ['secondBrain', 'Cornell'],
-      questions: ['What`s Second brain?', 'How it is working?'],
+      tags: ['مغز دوم', 'کرنل'],
+      questions: ['مغز دوم چیست؟', 'مغز دوم چگونه کار می کند؟'],
     },
     notes: [
       {
         isList: false,
-        title: 'Main idea',
+        title: 'ایده اصلی',
         text: [
           {
-            text: 'In the modern world, We are under attack of the informations. We are reciving massive informations every day.',
+            text: 'در دنیای مدرن اطلاعات ما مورد حجمه مقادیر بسیار زیاد اطلاعات قرار داریم. ما هر روز حجم عظیمی از اطلاعات را دریافت می کنیم.',
             link: '',
           },
           {
-            text: 'Building a Second Brain methodology will teach you how to:',
+            text: 'ساختن مغز دوم به شما یاد می دهد که چطور:',
             link: '',
           },
           {
-            text: '1-  Consistently move your projects and goals to completion by organizing and accessing your knowledge in a results-oriented way.',
+            text: '1-  همواره پروژه ها و اهداف خود را از طریق منظم کردن و نتیجه گرا کردن، به سمت کامل شدن پیش ببرید.',
             link: '',
           },
           {
-            text: '2-  Transform your personal knowledge into income, taking advantage of a rapidly growing knowledge economy.',
+            text: '2-  دانش شخصی خود را به درآمد تبدیل کنید, در این راه از رشد سریع دانش اقتصادی خود بهره مند شوید.',
             link: '',
           },
           {
-            text: '3-  Uncover unexpected patterns and connections between ideas.',
-            link: '',
-          },
-          {
-            text: '4-  Reduce stress and “information overload” by expertly curating and managing your personal information stream.',
-            link: '',
-          },
-          {
-            text: '5-  Develop valuable expertise, specialized knowledge, and the skills to deploy it in a new job, career, or business.',
-            link: '',
-          },
-          {
-            text: '6-  Cultivate a collection of valuable knowledge and insights over time without having to follow rigid, time-consuming rules.',
-            link: '',
-          },
-          {
-            text: '7-  Unlock the full value of the wealth of learning resources all around you, such as online courses, webinars, books, articles, forums, and podcasts.',
+            text: '3- از روش های غیر معمول و اتصال ایده های مخلتف بهره مند شوید.',
             link: '',
           },
         ],
       },
       {
         isList: true,
-        title: 'Topics',
+        title: 'فهرست',
         text: [
           {
-            text: 'programming',
+            text: 'برنامه نویسی',
             link: '2',
           },
           // {
@@ -71,14 +55,14 @@ const data = [
     summery: [
       {
         isList: false,
-        title: 'I hope it helps.',
+        title: 'امیدوارم این روش کمکی بکنه.',
         text: [''],
       },
     ],
   },
   {
     id: 2,
-    title: 'Programming Topics',
+    title: 'موضوعات برنامه نویسی',
     subTitle: 'Here I try to organize my activites in as a developer',
     link: '/secondBrain/2',
     date: '2021-11-25',

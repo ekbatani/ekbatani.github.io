@@ -2,13 +2,13 @@ import { React } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import Main from '../layouts/Main';
-import Note from '../components/SecondBrain/Note';
+import Note from '../components/SecondBrain/NoteFa';
 
-import data from '../data/SecondBrain/secondBrain';
+import data from '../data/SecondBrain/secondBrainFa';
 
 const sections = [
-  { title: 'Second brain', link: 1 },
-  { title: 'Programming', link: 2 },
+  { title: 'مغز دوم', link: 1 },
+  { title: 'برنامه نویسی', link: 2 },
 ];
 
 const getId = () => {
@@ -23,13 +23,13 @@ const getData = () => {
   return note;
 };
 
-const SecondBrain = () => (
+const SecondBrainFa = () => (
   <Main title="secondBrain" description="Second brain of Amir Ekbatani">
-    <article className="post" id="secondBrain">
+    <article dir="rtl" className="post fa" id="secondBrain">
       <header>
         <div className="title">
           <h2 data-testid="heading">
-            <Link to="/secondBrain/1">Second Brain</Link>
+            <Link to="/secondBrain/1">مغز دوم</Link>
           </h2>
           <div className="link-container">
             {sections.map((sec) => (
@@ -39,9 +39,9 @@ const SecondBrain = () => (
             ))}
           </div>
         </div>
-        <div className="title lang">
-          <Link to={`/secondBrainFa/${getId()}`} className="button fa">فارسی</Link>
-          <Link to={`/secondBrain/${getId()}`} className="button active">En</Link>
+        <div className="lang">
+          <Link to={`/secondBrainFa/${getId()}`} className="button active fa">فارسی</Link>
+          <Link to={`/secondBrain/${getId()}`} className="button">En</Link>
         </div>
       </header>
       <Note data={getData()} key={getId()} />
@@ -49,4 +49,4 @@ const SecondBrain = () => (
   </Main>
 );
 
-export default SecondBrain;
+export default SecondBrainFa;

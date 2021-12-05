@@ -1,9 +1,18 @@
 const positions = [
   {
+    company: 'Fadak trains',
+    position: 'Software Developer',
+    link: 'https://www.fadaktrains.com/',
+    daterange: 'November 2020 - Present',
+    points: [
+    ],
+  },
+
+  {
     company: 'Karafarin Insurance 2543 Agent',
     position: 'C.T.O.',
     link: 'https://notbime.ir',
-    daterange: 'July 2020 - Present',
+    daterange: 'July 2020 - November 2021',
     points: [
       'Develop MLM and CRM systems for insurance marketing.',
       'Some technologies that are used to develop this website : .net core web API, ef, SQL Server, ionic framework, angular, angular material, chart.js, ...',

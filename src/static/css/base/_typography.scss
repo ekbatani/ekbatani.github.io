@@ -6,6 +6,46 @@
 
 /* Type */
 
+@font-face {
+  font-family: IRSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../font/IRANSansWeb_Medium.woff") format("woff");
+  /* All Major Browsers */
+}
+
+@font-face {
+  font-family: IRSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../font/IRANSansWeb_Light.woff") format("woff");
+  /* All Major Browsers */
+}
+
+@font-face {
+  font-family: IRSans;
+  font-style: normal;
+  font-weight: 200;
+  src: url("../../font/IRANSansWeb_UltraLight.woff") format("woff");
+  /* All Major Browsers */
+}
+
+@font-face {
+  font-family: IRSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../font/IRANSansWeb.woff") format("woff");
+  /* All Major Browsers */
+}
+
+@font-face {
+  font-family: IRSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../../font/IRANSansWeb_Bold.woff") format("woff");
+  /* All Major Browsers */
+}
+
 body,
 input,
 select,
@@ -186,3 +226,4 @@ hr {
 .list-without-bullets {
   list-style-type: none;
 }
+

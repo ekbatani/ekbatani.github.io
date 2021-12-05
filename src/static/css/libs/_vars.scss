@@ -31,6 +31,19 @@
 		kerning-heading:			0.25em
 	);
 
+	// Font-fa.
+	$fontFa: (
+		family:						('IRSans', sans-serif),
+		family-fixed:				('IRSans', monospace),
+		family-heading:				('IRSans', Helvetica, sans-serif),
+		weight:						400,
+		weight-bold:				700,
+		weight-heading:				400,
+		weight-heading-bold:		800,
+		weight-heading-extrabold:	900,
+		kerning-heading:			0.25em
+	);
+
 // Palette.
 	$palette: (
 		bg:							#ffffff,
