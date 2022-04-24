@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import Script from 'next/script';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Main from './layouts/Main'; // fallback for lazy pages
 import './static/css/main.scss'; // All of our styles
@@ -20,22 +21,39 @@ const SecondBrain = lazy(() => import('./pages/SecondBrain'));
 const SecondBrainFa = lazy(() => import('./pages/SecondBrainFa'));
 
 const App = () => (
-  <BrowserRouter basename={PUBLIC_URL}>
-    <Suspense fallback={<Main />}>
-      <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/Blog" component={Blog} />
-        <Route path="/SecondBrain/:id" component={SecondBrain} />
-        <Route path="/SecondBrainFa/:id" component={SecondBrainFa} />
-        <Route path="/stats" component={Stats} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/resume" component={Resume} />
-        <Route component={NotFound} status={404} />
-      </Switch>
-    </Suspense>
-  </BrowserRouter>
+  <>
+    <Script
+      strategy="lazyOnload"
+      src="https://www.googletagmanager.com/gtag/js?id=G-JLW927R7YY"
+    />
+
+    <Script strategy="lazyOnload">
+      {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JLW927R7YY', {
+          page_path: window.location.pathname,
+          });
+      `}
+    </Script>
+    <BrowserRouter basename={PUBLIC_URL}>
+      <Suspense fallback={<Main />}>
+        <Switch>
+          <Route exact path="/" component={Index} />
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/Blog" component={Blog} />
+          <Route path="/SecondBrain/:id" component={SecondBrain} />
+          <Route path="/SecondBrainFa/:id" component={SecondBrainFa} />
+          <Route path="/stats" component={Stats} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/resume" component={Resume} />
+          <Route component={NotFound} status={404} />
+        </Switch>
+      </Suspense>
+    </BrowserRouter>
+  </>
 );
 
 export default App;
