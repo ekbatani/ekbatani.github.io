@@ -1,0 +1,357 @@
+{
+  "name": "Amir Ekbatani",
+  "headline": "Software Architect & Full-Stack Engineer · Microservices, AWS, AI systems",
+  "email": "amir.ekbatani@gmail.com",
+  "site": "https://ekbatani.github.io",
+  "intro": "{years} years, step by step: from building and supporting software for companies, to engineering large distributed systems, to architecting them. Today I build resilient systems (microservices, AWS infrastructure, AI agents) with care for the details, delivered on schedule.",
+  "about": [
+    "My journey started in 1999, when I was thirteen, with a 486 DX2 running DOS. There was no internet at home, only a few pages of handwritten notes from my uncle on how to find my way around the machine. Figuring things out from those notes was the start of a long road.",
+    "That road ran through software support, then hardware and network support, then programming: first C++, then C#. I took on small freelance projects, then went to university to study software engineering the academic way, at Islamic Azad University. In 2010 I joined Saze Gostar Saipa as a software and network contractor, and then spent about ten years building and supporting websites, internal applications and software for different companies, as part of small teams: learning management, payroll, CRM and office automation.",
+    "From 2020 I moved into engineering roles on larger distributed systems: railway operations and ticketing, then an English-learning platform built on Spring Boot microservices, gRPC and Kafka, running on AWS infrastructure I wrote in Pulumi to stay within a fixed budget. Most recently, as solution architect and .NET lead, I designed a multi-tenant e-invoicing platform and wrote its phased delivery plan.",
+    "What each step taught me: quality lives in the details, a plan only matters if it is kept, and a team does its best work when someone clears the path. On the side I build AI systems (multi-agent trading, natural-language BI, and RAG assistants that cite their sources), because I still enjoy learning something new."
+  ],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/ekbatani"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/amir-ekbatani-51b77a5a/"
+    },
+    {
+      "label": "X",
+      "url": "https://twitter.com/Amir_Ekbatani"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/amir_ekbatani/"
+    }
+  ],
+  "contact": {
+    "formEndpoint": "",
+    "availability": "Always up for a new challenge. If you have an idea, I would like to hear it."
+  },
+  "experience": [
+    {
+      "title": "Solution Architect & .NET Lead",
+      "company": "Vosouq",
+      "url": "",
+      "start": "2026-04",
+      "end": "",
+      "summary": "Designed a multi-tenant e-invoicing platform that files with Iran's National Tax Administration.",
+      "highlights": [
+        "Created a .NET 10 microservices starter with Minimal APIs, gRPC, DDD and CQRS, plus a Kafka proof of concept and Grafana monitoring."
+      ],
+      "skills": [
+        ".NET 10",
+        "gRPC",
+        "CQRS",
+        "Kafka",
+        "SQL Server",
+        "Java",
+        "Oracle"
+      ]
+    },
+    {
+      "title": "CTO",
+      "company": "Vellso",
+      "url": "https://vellso.com",
+      "start": "2022-08",
+      "end": "",
+      "location": "Remote",
+      "summary": "Lead engineering for an AI-powered English-learning platform: an enterprise-scale Java microservices system serving clients on multiple platforms.",
+      "highlights": [
+        "Own the system design: Spring Boot microservices secured by Keycloak, running on AWS (ECS on Graviton, CloudFront, RDS, Valkey) with both relational and NoSQL databases, provisioned in Pulumi within a fixed monthly budget.",
+        "Built the speech and language layer for learners: NLP, text-to-speech and speech-to-text pipelines that power speaking and listening practice.",
+        "Lead an AI-first engineering team, with automation and AI agents built into how we design, review and ship."
+      ],
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "Keycloak",
+        "AWS",
+        "MongoDB",
+        "Kafka",
+        "NLP",
+        "TTS / STT",
+        "gRPC",
+        "Pulumi"
+      ]
+    },
+    {
+      "title": "Backend Engineer",
+      "company": "Safir Rail",
+      "url": "",
+      "start": "2024-05",
+      "end": "2025-04",
+      "summary": "Railway operations and ticketing microservices.",
+      "highlights": [
+        "Built the Ocelot + Consul API gateway and the shared infrastructure libraries used by every service.",
+        "Developed the user service and parts of the planning and base-information gRPC services."
+      ],
+      "skills": [
+        ".NET",
+        "Ocelot",
+        "Consul",
+        "gRPC",
+        "Pulumi"
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "Fadak Trains",
+      "url": "https://www.fadaktrains.com/",
+      "start": "2020-11",
+      "end": "2022-10",
+      "summary": "Backend and front-end development.",
+      "highlights": [
+        "Built the company's Next.js website with Tailwind and Sentry monitoring.",
+        "Developed backend services in .NET with SQL Server."
+      ],
+      "skills": [
+        ".NET",
+        "SQL Server",
+        "Next.js",
+        "React",
+        "Tailwind"
+      ]
+    },
+    {
+      "title": "CTO",
+      "company": "Karafarin Insurance Agency 2543",
+      "url": "https://notbime.ir",
+      "start": "2017-01",
+      "end": "2021-11",
+      "summary": "Led technology for an insurance sales agency.",
+      "highlights": [
+        "Built MLM, CRM and office-automation systems for insurance marketing on ASP.NET Core, Angular and Ionic.",
+        "Designed a repository-pattern architecture integrated with third-party services over Web APIs.",
+        "Integrated the TRON blockchain API and built crypto wallet and payment solutions."
+      ],
+      "skills": [
+        "ASP.NET Core",
+        "Angular",
+        "Ionic",
+        "SQL Server",
+        "TRON",
+        "Blockchain"
+      ]
+    },
+    {
+      "title": "SEO Engineer & Developer",
+      "company": "Abzar Electronic Abnoos",
+      "url": "",
+      "start": "2011-10",
+      "end": "2016-12",
+      "summary": "Owned search visibility and internal tooling for a software and networking contractor.",
+      "highlights": [
+        "Led SEO for the company's WordPress sites: technical fixes, on-page optimization and content structure to grow organic search traffic.",
+        "Developed internal business applications in .NET with SQL Server."
+      ],
+      "skills": [
+        "WordPress",
+        "SEO",
+        ".NET",
+        "SQL Server"
+      ]
+    },
+    {
+      "title": "Software & Network Contractor",
+      "company": "Saze Gostar Saipa",
+      "url": "",
+      "start": "2010-10",
+      "end": "2012-01",
+      "summary": "Software and network specialist.",
+      "highlights": [],
+      "skills": []
+    }
+  ],
+  "education": [
+    {
+      "school": "Islamic Azad University, South Tehran Branch",
+      "degree": "B.S. Software Engineering",
+      "year": "2012"
+    }
+  ],
+  "projects": [
+    {
+      "name": "NaTradeMind",
+      "year": "2026",
+      "featured": true,
+      "url": "https://natrademind.com",
+      "repo": "",
+      "summary": "AI trading platform where ten kinds of agents — market analysts, risk manager, decision maker, journal keeper — work in configurable teams across 100+ exchanges and MetaTrader 5.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "TimescaleDB",
+        "Redis Streams",
+        "CCXT",
+        "Next.js"
+      ]
+    },
+    {
+      "name": "Inkest",
+      "year": "2026",
+      "featured": true,
+      "url": "https://inkest.natrademind.com/",
+      "repo": "https://github.com/ekbatani/inkest",
+      "summary": "A calm, Markdown-native workspace for notes, diary and projects, with an AI assistant that cites your own paragraphs. Self-hosted in one container.",
+      "stack": [
+        "Next.js 16",
+        "React 19",
+        "PostgreSQL",
+        "pgvector",
+        "Redis"
+      ]
+    },
+    {
+      "name": "iBi",
+      "year": "2026",
+      "featured": true,
+      "url": "",
+      "repo": "https://github.com/ekbatani/iBi",
+      "summary": "Persian-first business intelligence: ask in Persian, get safe SQL back through a LangGraph NL2SQL pipeline with syntax-tree guardrails and hybrid RAG.",
+      "stack": [
+        "FastAPI",
+        "LangGraph",
+        "LiteLLM",
+        "pgvector",
+        "Next.js"
+      ]
+    },
+    {
+      "name": "Geopolitical Intelligence Platform",
+      "year": "2026",
+      "featured": true,
+      "url": "",
+      "repo": "https://github.com/ekbatani/middle-east-geopolitic",
+      "summary": "Collects, verifies and scores Middle East developments with auditable evidence and a deterministic risk engine that LLMs can only nudge.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "pgvector",
+        "MinIO"
+      ]
+    },
+    {
+      "name": "Moshano",
+      "year": "2026",
+      "featured": false,
+      "url": "",
+      "repo": "",
+      "summary": "Persian consultation platform for booking, paying for and holding chat and video sessions with professional consultants.",
+      "stack": [
+        "Spring Boot",
+        "Next.js",
+        "Python"
+      ]
+    },
+    {
+      "name": "fixo24.com",
+      "year": "2026",
+      "featured": false,
+      "url": "https://fixo24.com",
+      "repo": "",
+      "summary": "SEO-first Persian marketplace for authorized home-appliance and HVAC repair agencies.",
+      "stack": [
+        "Next.js",
+        "tRPC",
+        "Prisma",
+        "NextAuth"
+      ]
+    },
+    {
+      "name": "ESP32 Emulator",
+      "year": "2026",
+      "featured": false,
+      "url": "",
+      "repo": "https://github.com/ekbatani/risc-v-esp32-emulator",
+      "summary": "Educational Xtensa LX6 / M5Stack simulator: CPU core, memory bus, assembler, LCD emulation and a terminal debugger, with eight lessons.",
+      "stack": [
+        "Rust",
+        "Ratatui"
+      ]
+    },
+    {
+      "name": "Celin",
+      "year": "2026",
+      "featured": false,
+      "url": "",
+      "repo": "https://github.com/ekbatani/Celin",
+      "summary": "A kid-safe AI cat companion running on an M5Stack Core: it knows day from night, reacts to weather and tells bedtime stories.",
+      "stack": [
+        "C++",
+        "ESP32"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Languages",
+      "items": [
+        "Java",
+        "C#",
+        "TypeScript",
+        "Python",
+        "Rust",
+        "SQL"
+      ]
+    },
+    {
+      "group": "Backend",
+      "items": [
+        "Spring Boot",
+        "ASP.NET Core",
+        "FastAPI",
+        "NestJS",
+        "gRPC"
+      ]
+    },
+    {
+      "group": "Frontend",
+      "items": [
+        "Next.js",
+        "React",
+        "Angular",
+        "Tailwind",
+        "MUI"
+      ]
+    },
+    {
+      "group": "Data",
+      "items": [
+        "PostgreSQL",
+        "MongoDB",
+        "SQL Server",
+        "Redis",
+        "Kafka",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "group": "Cloud",
+      "items": [
+        "AWS",
+        "Terraform",
+        "Pulumi",
+        "Docker",
+        "Keycloak",
+        "Grafana"
+      ]
+    },
+    {
+      "group": "AI",
+      "items": [
+        "LangGraph",
+        "LiteLLM",
+        "RAG",
+        "Multi-agent systems",
+        "Ollama"
+      ]
+    }
+  ]
+}

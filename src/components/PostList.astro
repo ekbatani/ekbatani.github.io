@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { postDate } from '../lib/format';
+
+const { posts } = Astro.props as { posts: CollectionEntry<'blog'>[] };
+---
+{posts.length === 0 ? (
+  <p class="muted">No posts yet — the first one is on its way.</p>
+) : (
+  <ul class="posts">
+    {posts.map((post) => (
+      <li>
+        <span class="mono muted">{postDate(post.data.date)}</span>
+        <div>
+          <a href={`/blog/${post.id}/`}>{post.data.title}{post.data.draft && ' (draft)'}</a>
+          <p>{post.data.description}</p>
+        </div>
+      </li>
+    ))}
+  </ul>
+)}

@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import { getProfile } from '../lib/profile.mjs';
+import { range } from '../lib/format';
+
+const profile = await getProfile();
+---
+<Base title="About" description={`About ${profile.name}: experience, skills and education.`}>
+  <h1>About</h1>
+  <div class="lead">
+    {profile.about.map((para) => <p>{para}</p>)}
+  </div>
+
+  <section>
+    <h2>Experience</h2>
+    <ol class="timeline">
+      {profile.experience.map((job) => (
+        <li>
+          <span class="mono muted small">{range(job.start, job.end)}</span>
+          <div>
+            <h3>{job.title}, {job.url ? <a href={job.url}>{job.company}</a> : job.company}</h3>
+            <p>{job.summary}</p>
+            {job.highlights.length > 0 && (
+              <ul>{job.highlights.map((h) => <li>{h}</li>)}</ul>
+            )}
+            {job.skills.length > 0 && <p class="tags">{job.skills.join(' · ')}</p>}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="grid-dl">
+      {profile.skills.map((s) => (<><dt>{s.group}</dt><dd>{s.items.join(', ')}</dd></>))}
+    </dl>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <dl class="grid-dl">
+      {profile.education.map((e) => (<><dt>{e.year}</dt><dd>{e.degree}, {e.school}</dd></>))}
+    </dl>
+  </section>
+</Base>

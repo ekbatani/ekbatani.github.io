@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectList from '../components/ProjectList.astro';
+import PostList from '../components/PostList.astro';
+import { getProfile } from '../lib/profile.mjs';
+import { getPosts } from '../lib/posts';
+import { yearSpan } from '../lib/format';
+const profile = await getProfile();
+
+const posts = (await getPosts()).slice(0, 3);
+const featured = profile.projects.filter((p) => p.featured);
+const recentJobs = profile.experience.slice(0, 3);
+---
+<Base>
+  <header>
+    <p class="eyebrow">{profile.headline.split('·')[0].trim()}</p>
+    <h1>{profile.name}</h1>
+    <p class="lead">{profile.intro}</p>
+    <nav class="links" aria-label="Elsewhere">
+      {profile.links.slice(0, 3).map((l) => <a href={l.url}>{l.label}</a>)}
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="section-head"><h2>Selected work</h2><a href="/projects/">All projects →</a></div>
+    <ProjectList projects={featured} />
+  </section>
+
+  {posts.length > 0 && (
+    <section>
+      <div class="section-head"><h2>Recent writing</h2><a href="/blog/">All posts →</a></div>
+      <PostList posts={posts} />
+    </section>
+  )}
+
+  <section>
+    <div class="section-head"><h2>Recently</h2><a href="/about/">Full experience →</a></div>
+    <ol class="timeline">
+      {recentJobs.map((job) => (
+        <li>
+          <span class="mono muted">{yearSpan(job.start, job.end)}</span>
+          <div>
+            <h3>{job.title}, {job.url ? <a href={job.url}>{job.company}</a> : job.company}</h3>
+            <p>{job.summary}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+</Base>

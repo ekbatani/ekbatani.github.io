@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import { getProfile } from '../lib/profile.mjs';
+const profile = await getProfile();
+
+// Any Formspree-compatible endpoint (accepts a POST with name/email/message and
+// replies with JSON when sent `Accept: application/json`). Empty = email only.
+const endpoint = profile.contact.formEndpoint;
+---
+<Base title="Contact" description={`Get in touch with ${profile.name}.`}>
+  <h1>Contact</h1>
+  <p class="lead">{profile.contact.availability}</p>
+  <p style="margin-top: 16px">
+    The fastest way to reach me is email: <a href={`mailto:${profile.email}`}>{profile.email}</a>.
+    A few lines on the problem, where it stands and what you have in mind is plenty. I usually reply within a few days.
+  </p>
+
+  {endpoint && (
+    <section>
+      <h2>Send a message</h2>
+      <form id="contact-form" action={endpoint} method="POST">
+        <label>Name <input name="name" autocomplete="name" required></label>
+        <label>Email <input name="email" type="email" autocomplete="email" required></label>
+        <label>Message <textarea name="message" placeholder="What are you working on?" required></textarea></label>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
+        <button type="submit">Send</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  )}
+
+  <section>
+    <h2>Elsewhere</h2>
+    <dl class="grid-dl">
+      {profile.links.map((l) => (<><dt>{l.label}</dt><dd><a href={l.url}>{l.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</a></dd></>))}
+    </dl>
+  </section>
+</Base>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#contact-form');
+  if (form) {
+    const status = form.querySelector<HTMLElement>('.form-status')!;
+    const button = form.querySelector<HTMLButtonElement>('button')!;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      button.disabled = true;
+      status.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        status.textContent = 'Thanks — your message is on its way. I usually reply within a few days.';
+      } catch {
+        status.textContent = 'Something went wrong. Please email me directly instead.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+</script>

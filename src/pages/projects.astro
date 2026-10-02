@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectList from '../components/ProjectList.astro';
+import { getProfile } from '../lib/profile.mjs';
+const profile = await getProfile();
+
+const featured = profile.projects.filter((p) => p.featured);
+const others = profile.projects.filter((p) => !p.featured);
+const github = profile.links.find((l) => l.label === 'GitHub');
+---
+<Base title="Projects" description="Things I've designed and built: AI systems, platforms and experiments.">
+  <h1>Projects</h1>
+  <p class="lead">Things I've designed and built outside of client work — AI systems and experiments that taught me something.</p>
+
+  <section>
+    <h2>Featured</h2>
+    <ProjectList projects={featured} />
+  </section>
+
+  <section>
+    <h2>More</h2>
+    <ProjectList projects={others} />
+  </section>
+
+  {github && <p class="muted small" style="margin-top: 56px">More on <a href={github.url}>GitHub</a>.</p>}
+</Base>
