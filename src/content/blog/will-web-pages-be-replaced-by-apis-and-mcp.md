@@ -3,7 +3,7 @@ title: Will web pages be deprecated and replaced by APIs and MCP services that t
 description: Agents are a new kind of client, and they don't need our pages. But pages aren't going away. They're becoming one interface among several.
 date: 2026-10-07
 tags: [ai, agents, mcp, architecture]
-draft: true
+draft: false
 linkedin: false
 ---
 
