@@ -3,7 +3,7 @@ title: "One agent per product, one approval gate: how I run six products alone"
 description: Running several products as a solo founder works when each one gets its own scoped agent and every risky step passes through a single human approval gate.
 date: 2026-10-14
 tags: [ai, agents, solo-founder, engineering]
-draft: true
+draft: false
 linkedin: false
 ---
 
